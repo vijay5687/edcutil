@@ -296,11 +296,6 @@ def getCatalogResourceCount(url, user, pWd):
     print("getting object count for catalog resource:-" + apiURL + " user=" + user)
     return callGETRestEndpoint(apiURL, user, pWd)
 
-###to do Job Status
-
-## to do Job Cancel
-
-## to export
 def CatalogQuery(url, user, pWd,query,offeset,pageSize):
     parameters = {'q': query, 'offset': offset, 'pageSize': pageSize}
     resp = requests.get(url, params=parameters, headers=header,auth=HTTPBasicAuth(user, pWd))
