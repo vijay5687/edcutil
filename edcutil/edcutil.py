@@ -295,6 +295,13 @@ def getCatalogResourceCount(url, user, pWd):
     apiURL = url + "/access/2/catalog/data/objects?q=core.allclassTypes:core.Resource"
     print("getting object count for catalog resource:-" + apiURL + " user=" + user)
     return callGETRestEndpoint(apiURL, user, pWd)
+
+###to do Job Status
+
+## to do Job Cancel
+
+## to export
+
     
     
     
