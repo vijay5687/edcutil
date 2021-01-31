@@ -301,6 +301,6 @@ def CatalogQuery(url, user, pWd,query,offeset,pageSize):
     resp = requests.get(url, params=parameters, headers=header,auth=HTTPBasicAuth(user, pWd))
     status = resp.status_code
     if status == 200:
-        return resultJson = resp.json()
+        return resp.json()
     else:
         return status, None
