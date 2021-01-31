@@ -301,8 +301,11 @@ def getCatalogResourceCount(url, user, pWd):
 ## to do Job Cancel
 
 ## to export
-
-    
-    
-    
-
+def CatalogQuery(url, user, pWd,query,offeset,pageSize):
+    parameters = {'q': query, 'offset': offset, 'pageSize': pageSize}
+    resp = requests.get(url, params=parameters, headers=header,auth=HTTPBasicAuth(user, pWd))
+    status = resp.status_code
+    if status == 200:
+        return resultJson = resp.json()
+    else:
+        return status, None
