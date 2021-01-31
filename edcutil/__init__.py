@@ -1,1 +1,1 @@
-from edcutil import *
+from .edcutil import *
